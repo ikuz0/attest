@@ -1,3 +1,6 @@
+from label import *
+from addModRem import *
+
 
 def menu_item(arg):
     while arg.isdigit() != True:
@@ -8,8 +11,8 @@ def menu_item(arg):
 
 def menu():
     notes = []
-    f = False
-    while f == False:
+
+    while True:
         print("Выберите пунк меню:\n\
               1-Просмотр заметок\n\
               2-Импортировать заметки\n\
@@ -20,20 +23,23 @@ def menu():
               0-Выход")
         choice = menu_item(input('Введите значение: '))
         if choice == 1:
-            print("просмотр")
+            print(f'=========================================')
+            printDB(notes)
+            print(f'=========================================')
         elif choice == 2:
             print("Импорт")
         elif choice == 3:
             print("Экспорт")
         elif choice == 4:
             print("Добавление")
+            notes.append(addNote(notes))
         elif choice == 5:
             print("Редактирование")
         elif choice == 6:
             print("Удаление")
         elif choice == 0:
             print("Программа завереша")
-            f = True
+            break
         else:
             print("Выбран несуществующий пункт!")
 

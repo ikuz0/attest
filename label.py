@@ -6,4 +6,4 @@ class Label:
         self.text = text
 
     def info(self):
-        return "id: {}\nTitle:{}\n {}".format(self.id, self.title, self.text)
+        return "id: {}\nЗаголовок: {}\nТекст: {}\nСоздана: {}".format(self.id, self.title, self.text, self.date)
