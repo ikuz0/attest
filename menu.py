@@ -2,13 +2,6 @@ from label import *
 from addModRem import *
 
 
-def menu_item(arg):
-    while arg.isdigit() != True:
-        print('\n Не верный ввод')
-        arg = input('Выберите пункт меню: ')
-    return int(arg)
-
-
 def menu():
     notes = []
 
@@ -31,10 +24,17 @@ def menu():
         elif choice == 3:
             print("Экспорт")
         elif choice == 4:
+            print(f'=========================================')
             print("Добавление")
+            print(f'=========================================')
             notes.append(addNote(notes))
+            print(f'=========================================')
         elif choice == 5:
+            print(f'=========================================')
             print("Редактирование")
+            print(f'=========================================')
+            editNote(notes)
+            print(f'=========================================')
         elif choice == 6:
             print("Удаление")
         elif choice == 0:
