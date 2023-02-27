@@ -1,5 +1,6 @@
 from label import *
 from addModRem import *
+from ImEx import *
 
 
 def menu():
@@ -20,9 +21,15 @@ def menu():
             printDB(notes)
             print(f'=========================================')
         elif choice == 2:
+            print(f'=========================================')
             print("Импорт")
+            print(f'=========================================')
+            notes = importNote()
         elif choice == 3:
+            print(f'=========================================')
             print("Экспорт")
+            print(f'=========================================')
+            exportNote(notes)
         elif choice == 4:
             print(f'=========================================')
             print("Добавление")
@@ -36,12 +43,13 @@ def menu():
             editNote(notes)
             print(f'=========================================')
         elif choice == 6:
+            print(f'=========================================')
             print("Удаление")
+            print(f'=========================================')
+            rmNote(notes)
+            print(f'=========================================')
         elif choice == 0:
             print("Программа завереша")
             break
         else:
             print("Выбран несуществующий пункт!")
-
-
-menu()
